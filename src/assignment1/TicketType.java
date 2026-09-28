@@ -1,8 +1,8 @@
 package assignment1;
 
 public final class TicketType {
-	private String name;
-	private double price;
+	private final String name;
+	private final double price;
 	
 	public TicketType(String name, double price) {
 		if (name == null || name.isBlank() || price < 0) {
@@ -22,7 +22,7 @@ public final class TicketType {
 	}
 	
 	public String toString() {
-		return name + ": $" + price;
+		return name + ": $" + String.format("%.2f", price);
 	}
 	
 }

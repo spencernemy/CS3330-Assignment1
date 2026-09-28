@@ -1,8 +1,8 @@
 package assignment1;
 
 public final class Event {
-	private String name;
-	private String location;
+	private final String name;
+	private final String location;
 	
 	public Event(String name, String location) {
 		if (name == null || name.isBlank() || location == null || location.isBlank()) {

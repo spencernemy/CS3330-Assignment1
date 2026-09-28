@@ -12,12 +12,14 @@ public class TicketBook {
         this.count = 0;
     }
 
-    public void createTicket(int id, Event event, TicketType type, String studentName) {
+    public Ticket createTicket(int id, Event event, TicketType type, String studentName) {
         if (count >= tickets.length) {
             throw new IllegalStateException("Ticket book is full");
         }
+        
         tickets[count] = new Ticket(id, event, type, studentName);
-        count++;
+        
+        return tickets[count++];
     }
 
     public Ticket findById(int id) {
@@ -35,8 +37,9 @@ public class TicketBook {
         }
     }
 
-    public void printAllForSpecificEvent(Event event) {
+    public void printForEvent(Event event) {
         for (int i = 0; i < count; i++) {
+        	// Compares the actual Event objects here
             if (tickets[i].getEvent() == event) {
                 System.out.println(tickets[i]);
             }
