@@ -1,4 +1,4 @@
-Project Group: G12, Spencer Niemeyer and Max Limpiphiphatn
+Project Group: G16, Spencer Niemeyer and Max Limpiphiphatn
 
 
 
